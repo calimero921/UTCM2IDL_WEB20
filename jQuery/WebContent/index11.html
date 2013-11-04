@@ -1,0 +1,45 @@
+<script src="../jquery-1.10.2.js"></script>
+
+<style type="text/css">
+	p.red{
+		color:red;
+		opacity:0.5;
+	}
+	p.blue{
+		color:blue;
+		opacity:0.5;
+	}
+	p.green{
+		color:green;
+		opacity:0.5;
+	}
+	p.yellow{
+		color:yellow;
+		opacity:0.5;
+	}
+	p.big{
+		font-size:25px;
+	}
+</style>
+
+<div class = "blue" title="D1">Division 1
+	<p class = "big red" title="P1">> Paragraph 1</p>
+	<p class = "green" title="P2">> Paragraph 2</p>
+	<p class = "red" title="P3">> Paragraph 3</p>
+</div>
+<div class = "green" title="D2">Division 2
+	<p class = "big blue" title="P4">> Paragraph 4</p>
+	<p class = "green" title="P5">> Paragraph 5</p>
+	<p class = "blue" title="P6">> Paragraph 6</p>
+</div>
+
+<script>
+	//retire la valeur de l'attribut class pour la valeur red
+	$("p").removeClass("red");
+	//retire la valeur de l'attribut class pour la valeur green
+	$("p").removeClass("green");
+	//retire la valeur de l'attribut class pour la valeur blue
+	$("p").removeClass("blue");
+	//ajoute la valeur de l'attribut class à la valeur red pour tous les P
+	$("p").addClass("red");
+</script>

@@ -1,0 +1,28 @@
+<script src="jquery-1.10.2.js"></script>
+
+<div class = "blue" title="D1">Division 1
+	<h1>
+		<p class = "red" title="P1">> Paragraph 1</p>
+	</h1>
+	<p class = "green" title="P2">> Paragraph 2</p>
+</div>
+<p class = "red" title="P3">Paragraph 3</p>
+<div class = "green" title="D2">Division 2
+	<h1>
+		<p class = "blue" title="P4">> Paragraph 4</p>
+	</h1>
+	<p class = "green" title="P5">> Paragraph 5</p>
+</div>
+<p class = "blue" title="P6">Paragraph 6</p>
+
+<script>
+	//prend tous les paragraphes dans des div
+	//et les écrits en rouge
+	$("div p").css("color", "red");
+	//prend tous les paragraphes hors des div (pseudo class not)
+	//et les écrits en bleue
+	$("p:not(div p)").css("color", "blue");
+	//prend tous les paragraphes directement dans des div
+	//et les écrits en orange
+	$("div>p").css("color", "orange");
+</script>

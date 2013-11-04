@@ -1,0 +1,25 @@
+<script src="jquery-1.10.2.js"></script>
+
+<div class = "blue" title="D1">Division 1</div>
+<p class = "red" title="P1">Paragraph 1</p>
+<p class = "green" title="P2">Paragraph 2</p>
+<p class = "red" title="P3">Paragraph 3 par eric</p>
+<div class = "green" title="D2">Division 2</div>
+<p class = "blue" title="P4">Paragraph 4</p>
+<p class = "green" title="P5">Paragraph 5 par eric</p>
+<p class = "blue" title="P6">Paragraph 6</p>
+
+<script>
+	//prend le premier paragraphe (pseudo class first)
+	//et les écrits en bleue
+	$("p:first").css("color", "blue");
+	//prend le second paragraphe (pseudo class eq(1))
+	//et les écrits en rouge
+	$("p:eq(1)").css("color", "red");
+	//prend le dernier paragraphe (pseudo class last)
+	//et les écrits en vert
+	$("p:last").css("color", "green");
+	//prend tous les paragraphes contenant eric(pseudo class contains)
+	//et les écrits en orange
+	$("p:contains(eric)").css("color", "orange");
+</script>

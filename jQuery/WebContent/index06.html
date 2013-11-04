@@ -1,0 +1,20 @@
+<script src="jquery-1.10.2.js"></script>
+
+<div>Division 1</div>
+<p id = "P1" title="P1">Paragraph 1</p>
+<p id = "P2" title="P2">Paragraph 2</p>
+<p id = "P2" title="P3">Paragraph 3</p>
+<p id = "P3" title="P4">Paragraph 4</p>
+<p id = "P3" title="P5">Paragraph 5</p>
+
+<script>
+	//prend toutes les paragraphes contenant l'attribut id de valeur P1
+	//et les écrits en rouge
+	$("p[id=P1]").css("color", "red");
+	//prend toutes les paragraphes contenant l'attribut id de valeur P2
+	//et les écrits en rouge
+	$("p#P2").css("color", "red");
+	//prend toutes les paragraphes contenant l'attribut id de valeur P3
+	//et les écrits en rouge
+	$("#P3").css("color", "red");
+</script>
