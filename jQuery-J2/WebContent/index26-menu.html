@@ -1,29 +1,53 @@
 <script src="../jquery-1.10.2.js"></script>
 <style>
-	.cadre{
+	.menuBar{
+		background: lightgray;
+		foreground: black;
 		border: solid 1px;
-		width: 50px;
+		background: lightgray;
+		margin: 5px;
+	}
+	.menuItem{
+		background: lightgray;
+		foreground: black;
+		margin: 5px;
+	}
+	.menuItemBack{
+		position: absolute;
+		border: solid 1px;
+		background: lightgray;
 	}
 	.cache{
 		display: none;
 	}
 </style>
-
-<input id="menuBtn" type="button" value="Afficher menu">
-<div id="menuWnd" class="cadre cache">
-	<span>menu 1</span><br>
-	<span>menu 2</span><br>
-	<span>menu 3</span>
+<div id="mb1" class="menuBar">
+	<span id="mt1" class="menuText">Menu 1</span>
+	<span id="mt2" class="menuText">Menu 2</span>
+	<span id="mt3" class="menuText">Menu 3</span>
+	<span id="mt4" class="menuText">Menu 4</span>
+</div>
+<div id="mw1" class="menuBack cache">
+	<span id="mi11" class="menuItem">menu 1</span><br>
+	<span id="mi12" class="menuItem">menu 2</span><br>
+	<span id="mi13" class="menuItem">menu 3</span>
 </div>
 
 <script>
 	$(document).click(function(){
-		$("#menuWnd").addClass("cache");
+		$("#mw1").addClass("cache");
 	})
 
 	//intercepte le clic sur le bouton
-	$("#menuBtn").click(function(event){
-		$("#menuWnd").removeClass("cache");
+	$(".menuText").click(function(event){
+		$("#mw1").css("left",$("this").left);
+		$("#mw1").css("top",$("this").bottom);
+		$("#mw1").css("width","80")
+		$("#mw1").removeClass("cache");
 		event.stopPropagation();
 	});
+
+	$("#mw1 span").click(function(){
+		alert($("this").html());
+	})
 </script>
