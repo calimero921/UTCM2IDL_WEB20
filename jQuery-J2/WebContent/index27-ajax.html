@@ -1,9 +1,16 @@
 <script src="../jquery-1.10.2.js"></script>
 
-<div>Test Ajax</div>
+<div id="test">Test Ajax
+	<p id="data"></p>
+</div>
 
 <script>
-$.ajax({
-	url: "http://localhost/ajax/index27-ajax.php";
-});
+	$("#test").click(function(){
+		$.ajax({
+			url: "index27-ajax.php",
+			complete: function(xhr){
+				$("#data").html(xhr.responseText);
+			}
+		});
+	});
 </script>

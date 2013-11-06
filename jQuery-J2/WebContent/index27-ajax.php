@@ -1,3 +1,4 @@
 <?php
-	echo "bonjour";
+	echo "Bonjour, il est ";
+	echo time();
 ?>
