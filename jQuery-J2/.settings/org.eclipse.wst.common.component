@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="jQuery-J1">
+    <wb-module deploy-name="jQuery-J2">
         <wb-resource deploy-path="/" source-path="/WebContent"/>
-        <property name="context-root" value="jQuery-J1"/>
+        <property name="context-root" value="jQuery-J2"/>
     </wb-module>
 </project-modules>

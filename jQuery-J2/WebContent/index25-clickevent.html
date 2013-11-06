@@ -1,0 +1,36 @@
+<script src="../jquery-1.10.2.js"></script>
+
+<style type="text/css">
+	.blue{
+		color:blue;
+	}
+	.green{
+		color:green;
+	}
+	.orange{
+		color:orange;
+	}
+	.red{
+		color:red;
+	}
+</style>
+
+<div class="orange" title="D1">Division: français
+	<p class="big" title="BJ">Bonjour,</p>
+	<p class="big" title="P1">Paragraph 1</p>
+	<p class="big" title="P2">Paragraph 2</p>
+	<p class="big" title="P3">Paragraph 3</p>
+</div>
+<div class="green" title="D2">Position
+	<p id="xpos" class="big" title="XPos"></p>
+	<p id="ypos" class="big" title="YPos"></p>
+</div>
+
+<script>
+	//intercepte le clic sur les p
+	$(document).click(function(event){
+		$("#xpos").html(event.pageX);
+		$("#ypos").html(event.pageY);
+		//alert("X:" + event.pageX + ", Y:" + event.pageY);
+	});
+</script>

@@ -1,0 +1,29 @@
+<script src="../jquery-1.10.2.js"></script>
+<style>
+	.cadre{
+		border: solid 1px;
+		width: 50px;
+	}
+	.cache{
+		display: none;
+	}
+</style>
+
+<input id="menuBtn" type="button" value="Afficher menu">
+<div id="menuWnd" class="cadre cache">
+	<span>menu 1</span><br>
+	<span>menu 2</span><br>
+	<span>menu 3</span>
+</div>
+
+<script>
+	$(document).click(function(){
+		$("div#menuWnd").addClass("cache");
+	})
+
+	//intercepte le clic sur le bouton
+	$("#menuBtn").click(function(event){
+		$("#menuWnd").removeClass("cache");
+		event.stopPropagation();
+	});
+</script>
