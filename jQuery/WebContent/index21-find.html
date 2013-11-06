@@ -14,6 +14,6 @@
 </div>
 
 <script>
-	//prend chaque élément p et lui ajoute eric (utilise DOM en direct)
-	$("p:first-child").append("<i> eric,</i>")
+	//ecrit les div (en fils) en rouge et ajoute eric à la fin de chaque p premier fils
+	$("div").css("color", "red").find("p:first-child").append(" eric,");
 </script>
